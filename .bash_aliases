@@ -7,4 +7,4 @@ alias mount_field='sudo smbmount //10.100.30.20/ace_logs ~/qnas_logs -o"username
 alias vim="/home/jdschwartz/src/vim/src/vim"
 alias gvim="/home/jdschwartz/src/vim/gvim"
 alias go="cd /home/jdschwartz/src/ng_gv_3d/src/pt_cloud_fusion"
-alias git_brclean="git branch --merged | grep -v "\*" | xargs -n 1 git branch -d"
+alias git_brclean='git branch --merged | grep -v "\*" | xargs -n 1 git branch -d'
