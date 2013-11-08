@@ -111,6 +111,13 @@ export PYTHONPATH=${HOME}/src/af_ace_autonomy:${HOME}/src/af_ace_ocu_sw:${HOME}/
 export ZETA_LOG_DIR=${HOME}/src/zeta_logs
 export ZETA=${HOME}/src/zeta_core
 export EDITOR=${HOME}/src/vim/src/vim
+export CUDA=/usr/local/cuda
+export CUDA_BIN=${CUDA}/bin
+export CUDA_LIB=${CUDA}/lib:${CUDA}/lib64
+export PATH=${PATH}:${CUDA_BIN}
+export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:${CUDA_LIB}
+
+
 # source /opt/ros/fuerte/setup.bash
 
 
