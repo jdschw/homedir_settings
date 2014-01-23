@@ -1,5 +1,5 @@
 alias scpr="scp -r"
-alias jgrep="grep -Ilr"
+alias jgrep="grep -Ir --exclude=tags"
 alias lst="ls -tr"
 alias mount_amfs1='sudo smbmount //am-fs1.amthinking.net/applied_minds /mnt/am-fs1/ -o"username=jdschwartz,uid=1000,gid=1000,file_mode=0666,dir_mode=0775"'
 alias mount_qnas='sudo smbmount //clyde.amthinking.net/ace_logs ~/qnas_logs -o"username=ace,password=ace,uid=1000,gid=1000,file_mode=0666,dir_mode=0775"'
