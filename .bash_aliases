@@ -1,9 +1,8 @@
 alias scpr="scp -r"
 alias jgrep="grep -Ir --exclude=tags"
 alias lst="ls -tr"
-alias mount_amfs1='sudo smbmount //am-fs1.amthinking.net/applied_minds /mnt/am-fs1/ -o"username=jdschwartz,uid=1000,gid=1000,file_mode=0666,dir_mode=0775"'
-alias mount_qnas='sudo smbmount //clyde.amthinking.net/ace_logs ~/qnas_logs -o"username=ace,password=ace,uid=1000,gid=1000,file_mode=0666,dir_mode=0775"'
-alias mount_field='sudo smbmount //10.100.30.20/ace_logs ~/qnas_logs -o"username=ace,password=ace,uid=1000,gid=1000,file_mode=0666,dir_mode=0775"'
+alias mount_amfs1='sudo mount -t cifs //am-fs1.amthinking.net/applied_minds /mnt/am-fs1/ -o"username=jdschwartz,uid=1000,gid=1000,file_mode=0666,dir_mode=0775"'
+alias mount_qnas='sudo mount -t cifs //clyde.amthinking.net/ace_logs ~/qnas_logs -o"username=ace,password=ace,uid=1000,gid=1000,file_mode=0666,dir_mode=0775"'
 alias vi="~/src/vim/src/vim"
 alias vim="~/src/vim/src/vim"
 alias gvim="~/src/vim/gvim"
