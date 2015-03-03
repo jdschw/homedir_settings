@@ -8,4 +8,4 @@ alias go2="cd ~/src/MultiVehicleSimulator/components/Systems"
 # branches from the system.  The first command cleans them up locally, and the
 # second one cleans them up on the origin remote.
 alias git_brclean='git branch --merged | grep -v "\*" | grep -i "jeremy" | xargs -n 1 git branch -d'
-alias git_originclean='git branch -a --merged | grep -v "\*" | grep -v "HEAD" | grep -i "jeremy" | sed -e "s#.*/jeremy#:jeremy#" | xargs --verbose -n 1 git push origin'
+alias git_originclean='git branch -a --merged | grep -v "\*" | grep -v "HEAD" | grep -i "/jeremy" | sed -e "s#.*/jeremy#:jeremy#" | xargs --verbose -n 1 git push origin'
