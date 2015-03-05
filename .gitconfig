@@ -10,12 +10,9 @@
 	default = tracking
 [alias]
   st = status
-  ci = commit
-  co = checkout
-  br = branch
-  lc = log ORIG_HEAD.. --stat --no-merges
+  lc = log --stat --no-merges
   k  = !gitk --all
   di = diff -b
   smu = submodule update --init --recursive
-  see = log --graph --full-history --all --color --pretty=format:"%x1b[31m%h%x09%x1b[32m%d%x1b[0m%x20%s"
+  see = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --date=relative
 
