@@ -4,6 +4,8 @@ alias mount_drive='sudo mount -t cifs //fs.ai.appliedinvention.com/Applied_Inven
 alias go="cd ~/src/MultiVehicleSimulator"
 alias go2="cd ~/src/MultiVehicleSimulator/components/Systems"
 
+gvfind() { gvim `find . -iname *$1*`; }
+
 # When using named branches, this is a convenient way to scrub your old, merged
 # branches from the system.  The first command cleans them up locally, and the
 # second one cleans them up on the origin remote.
