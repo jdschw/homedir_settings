@@ -106,18 +106,10 @@ if [ -f /etc/bash_completion ] && ! shopt -oq posix; then
     . /etc/bash_completion
 fi
 
-export PATH=${PATH}:${HOME}/src/zeta_core/bin
-export PYTHONPATH=${HOME}/src/af_ace_autonomy:${HOME}/src/af_ace_ocu_sw:${HOME}/src/save:${HOME}/src/zeta_ui:${HOME}/src/af_ace_autonomy_public:${HOME}/src/af_ace_autonomy/af_ace_ocu_sw_public:${HOME}/src/zeta_core:${HOME}/src/af_ace_ocu_hw:${HOME}/src/af_ace_robot_hw:${HOME}/src/af_ace_ocu_hw_public:${HOME}/src/af_ace_robot_hw_public:${HOME}/src/zeta_more
-export ZETA_LOG_DIR=${HOME}/src/zeta_logs
-export ZETA=${HOME}/src/zeta_core
 export EDITOR=/usr/bin/vim
-export CUDA=/usr/local/cuda
-export CUDA_BIN=${CUDA}/bin
-export CUDA_LIB=${CUDA}/lib:${CUDA}/lib64
-export PATH=${PATH}:${CUDA_BIN}
-export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:${CUDA_LIB}
+export VISUAL="${EDITOR}"
 
 
 # source /opt/ros/fuerte/setup.bash
 
-
+export PATH="/opt/gcc-arm-none-eabi-4_8-2014q3/bin:${PATH}"
