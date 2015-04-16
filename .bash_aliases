@@ -4,7 +4,7 @@ alias mount_drive='sudo mount -t cifs //fs.ai.appliedinvention.com/Applied_Inven
 alias go="cd ~/src/MultiVehicleSimulator"
 alias go2="cd ~/src/MultiVehicleSimulator/components/Systems"
 
-gvfind() { gvim `find . -writable -iname *$1* -and -not -name '*.pyc'`; }
+gvfind() { gvim `find . -writable -type f -iname *$1* -exec grep -Il . {} \;`; }
 
 # When using named branches, this is a convenient way to scrub your old, merged
 # branches from the system.  The first command cleans them up locally, and the
