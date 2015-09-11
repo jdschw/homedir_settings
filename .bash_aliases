@@ -1,8 +1,8 @@
 alias jgrep="grep -Ir --exclude=tags"
 alias lst="ls -tr"
 alias mount_drive='sudo mount -t cifs //fs.ai.appliedinvention.com/Applied_Invention /mnt/am-fs1/ -o"username=jdschwartz,uid=1000,gid=1000,file_mode=0666,dir_mode=0775"'
-alias go="cd ~/src/MultiVehicleSimulator"
-alias go2="cd ~/src/MultiVehicleSimulator/components/Systems"
+alias go="cd ~/src/Systems"
+alias go2="cd ~/src/MultiVehicleSimulator"
 
 gvfind() { gvim `find . -writable -type f -iname *$1* -and -not -path *.git* -exec grep -Il . {} \;`; }
 vfind() { vim `find . -writable -type f -iname *$1* -and -not -path *.git* -exec grep -Il . {} \;`; }
