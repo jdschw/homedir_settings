@@ -11,6 +11,13 @@ vfind() { vim `find . -writable -type f -iname *$1* -and -not -path *.git* -exec
 # branches from the system.  The first command cleans them up locally, and the
 # second one cleans them up on the origin remote.
 alias git_brclean='git branch --merged | grep -v "\*" | grep -i "jeremy" | xargs -n 1 git branch -d'
-alias git_originclean='git branch -a --merged | grep -v "\*" | grep -v "HEAD" | grep -i "/jeremy" | sed -e "s#.*/jeremy#:jeremy#" | xargs --verbose -n 1 git push origin'
+git_originclean() {
+    if [[ $# -eq 0 ]]
+    then
+        echo 'You must provide a branch prefix!'
+    else
+        git branch -a --merged | grep -v "\*" | grep -v "HEAD" | grep -i "/$@" | sed -e "s#.*/$@#:$@#" | xargs --verbose -n 1 git push origin;
+    fi
+    }
 
 alias mount_logs='sudo mount -t cifs //10.32.10.32/Logs /mnt/logs -o uid=1000,username="Nest0",password="takeoff1",nounix'
