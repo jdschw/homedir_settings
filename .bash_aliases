@@ -16,7 +16,6 @@ git_brclean() {
         then
             echo 'You must provide a branch prefix!'
     else
-        echo "input: $@"
         git branch --merged | grep -v "\*" | grep -i "$@" | xargs -n 1 git branch -d;
     fi
 }
