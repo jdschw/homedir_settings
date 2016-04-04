@@ -10,14 +10,23 @@ vfind() { vim `find . -writable -type f -iname *$1* -and -not -path *.git* -exec
 # When using named branches, this is a convenient way to scrub your old, merged
 # branches from the system.  The first command cleans them up locally, and the
 # second one cleans them up on the origin remote.
-alias git_brclean='git branch --merged | grep -v "\*" | grep -i "jeremy" | xargs -n 1 git branch -d'
+
+git_brclean() {
+    if [[ $# -eq 0 ]]
+        then
+            echo 'You must provide a branch prefix!'
+    else
+        echo "input: $@"
+        git branch --merged | grep -v "\*" | grep -i "$@" | xargs -n 1 git branch -d;
+    fi
+}
 git_originclean() {
     if [[ $# -eq 0 ]]
-    then
-        echo 'You must provide a branch prefix!'
+        then
+            echo 'You must provide a branch prefix!'
     else
         git branch -a --merged | grep -v "\*" | grep -v "HEAD" | grep -i "/$@" | sed -e "s#.*/$@#:$@#" | xargs --verbose -n 1 git push origin;
     fi
-    }
+}
 
 alias mount_logs='sudo mount -t cifs //10.32.10.32/Logs /mnt/logs -o uid=1000,username="Nest0",password="takeoff1",nounix'
