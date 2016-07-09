@@ -1,22 +1,22 @@
 [user]
-	name = Jeremy Schwartz
-	email = jeremy@romotive.com
+    name = Jeremy Schwartz
+    email = jeremy@flyzipline.com
 [color]
-	branch = auto
-	diff = auto
-	status = auto
-	ui = auto
+    branch = auto
+    diff = auto
+    status = auto
+    ui = auto
 [push]
-	default = tracking
+    default = tracking
 [alias]
-  st = status
-  lc = log --stat --no-merges
-  k  = !gitk --all
-  di = diff -b
-  pff = pull --ff-only
-  smu = submodule update --init --recursive
-  see = log --graph --all --full-history --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --date=relative
-  seeme = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --date=relative
+    st = status
+    lc = log --stat --no-merges
+    k  = !gitk --all
+    di = diff -b
+    pff = pull --ff-only
+    smu = submodule update --init --recursive
+    see = log --graph --all --full-history --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --date=relative
+    seeme = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --date=relative
 
 [core]
-	autocrlf = input
+    autocrlf = input
