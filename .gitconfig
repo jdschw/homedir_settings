@@ -14,9 +14,14 @@
     k  = !gitk --all
     di = diff -b
     pff = pull --ff-only
+    pu = push -u origin HEAD
     smu = submodule update --init --recursive
     see = log --graph --all --full-history --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --date=relative
     seeme = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --date=relative
 
 [core]
     autocrlf = input
+[filter "lfs"]
+    clean = git-lfs clean %f
+    smudge = git-lfs smudge %f
+    required = true

@@ -109,10 +109,15 @@ fi
 export EDITOR=/usr/bin/vim
 export VISUAL="${EDITOR}"
 
+# Eliminating some gtk error messages
+export NO_AT_BRIDGE=1
 
 # source /opt/ros/fuerte/setup.bash
 
 export PATH="/opt/gcc-arm-none-eabi-4_8-2014q3/bin:${PATH}"
+export FG_ROOT=/usr/share/games/flightgear/
+
+export PYTHONPATH="/home/jeremy/src/Systems:${PYTHONPATH}"
 
 # set up ssh agent, or pull in the settings if one is running
 SSH_ENV="$HOME/.ssh/environment"
