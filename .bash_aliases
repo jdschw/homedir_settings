@@ -1,11 +1,11 @@
 alias jgrep="grep -Ir --exclude=tags"
 alias lst="ls -tr"
-alias mount_drive='sudo mount -t cifs //fs.ai.appliedinvention.com/Applied_Invention /mnt/am-fs1/ -o"username=jdschwartz,uid=1000,gid=1000,file_mode=0666,dir_mode=0775"'
-alias go="cd ~/src/Systems"
-alias ms_regen="python ../state_machine/autocode_state_machine.py --state-machine mission_state_machine.yaml --out mission_state_machine && git clean -f . -e *.html"
+alias go="cd ~/src/driving"
+alias desk="ssh jschwartz@172.16.214.198"
 
-gvfind() { gvim `find . -name .git -prune -o -name build* -prune -o -writable -type f -iname *$1* -exec grep -Il . {} \;`; }
-nvfind() { nvim `find . -name .git -prune -o -name build* -prune -o -writable -type f -iname *$1* -exec grep -Il . {} \;`; }
+alias ctags="`brew --prefix`/bin/ctags"
+
+nvfind() { nvim `find . -name .git -prune -o -perm -200 -type f -iname '*'$1'*' -exec grep -Il . {} \;`; }
 vfind() { vim `find . -name .git -prune -o -name build* -prune -o -writable -type f -iname *$1* -exec grep -Il . {} \;`; }
 
 # When using named branches, this is a convenient way to scrub your old, merged
@@ -28,9 +28,3 @@ git_originclean() {
         git branch -a --merged | grep -v "\*" | grep -v "HEAD" | grep -i "/$@" | sed -e "s#.*/$@#:$@#" | xargs --verbose -n 1 git push origin;
     fi
 }
-
-alias mount_logs='sudo mount -t cifs //10.32.10.32/Logs /mnt/logs -o uid=1000,username="Nest0",password="takeoff1",nounix'
-
-# Deployment-related aliases
-
-alias autocode="scons fetch_autocode variants=host"

@@ -1,6 +1,6 @@
 [user]
     name = Jeremy Schwartz
-    email = jeremy@flyzipline.com
+    email = jschwartz@zoox.com
 [color]
     branch = auto
     diff = auto
@@ -12,6 +12,7 @@
     st = status
     lc = log --stat --no-merges
     k  = !gitk --all
+    kme  = !gitk --branches='*'jschwartz'*'
     di = diff -b
     pff = pull --ff-only
     pu = push -u origin HEAD
@@ -21,6 +22,7 @@
 
 [core]
     autocrlf = input
+	excludesfile = /Users/jschwartz/.gitignore
 [filter "lfs"]
     clean = git-lfs clean %f
     smudge = git-lfs smudge %f
